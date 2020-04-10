@@ -1,6 +1,6 @@
 #include "library.h"
 
-void aboutGame()
+void aboutgame()
 {
 
 }

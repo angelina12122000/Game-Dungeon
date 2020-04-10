@@ -1,6 +1,6 @@
 #include "library.h"
 
-void Game()
+void main()
 {
 
 }

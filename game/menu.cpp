@@ -3,60 +3,60 @@
 void menu()
 {
 	int m = 0;
-	RenderWindow window(VideoMode(1152, 768), L"Меню");
-	//Texture BackgroundTexture;
-	//BackgroundTexture.loadFromFile("C:/Users/Ангелина/source/repos/game/game/imges/p.jpg");
-	//Sprite Background(BackgroundTexture);
+	RenderWindow window(VideoMode(1200, 768), L"Меню", sf::Style::Fullscreen);
+	Texture BackgroundTexture;
+	BackgroundTexture.loadFromFile("C:/Users/Ангелина/source/repos/game/game/imges/fonMenu.png");
+	Sprite Background(BackgroundTexture);
 
-	RectangleShape Game;
-	Game.setPosition(Vector2f(80.f, 250.f));
-	Game.setSize(Vector2f(200.f, 70.f));
-	Game.setFillColor(Color(0, 0, 0));
+	/*RectangleShape Game;
+	Game.setPosition(Vector2f(476.f, 218.f));//позиция текста
+	Game.setFillColor(Color(250, 0, 0));
 	Game.setOutlineThickness(5.f);
 	Game.setOutlineColor(Color(251, 62, 146));
 
 	RectangleShape aboutGame;
-	aboutGame.setPosition(Vector2f(872.f, 250.f));
-	aboutGame.setSize(Vector2f(200.f, 70.f));
+	aboutGame.setPosition(Vector2f(476.f, 288.f));//позиция текста
 	aboutGame.setFillColor(Color(0, 0, 0));
 	aboutGame.setOutlineThickness(5.f);
 	aboutGame.setOutlineColor(Color(251, 62, 146));
 
 	RectangleShape desk_of_fame;
-	desk_of_fame.setPosition(Vector2f(326.f, 80.f));
-	desk_of_fame.setSize(Vector2f(200.f, 70.f));
+	desk_of_fame.setPosition(Vector2f(476.f, 358.f));//позиция текста
 	desk_of_fame.setFillColor(Color(0, 0, 0));
 	desk_of_fame.setOutlineThickness(5.f);
 	desk_of_fame.setOutlineColor(Color(251, 62, 146));
 
 	RectangleShape help;
-	help.setPosition(Vector2f(626.f, 80.f));
-	help.setSize(Vector2f(200.f, 70.f));
+	help.setPosition(Vector2f(476.f, 428.f));//позиция текста
 	help.setFillColor(Color(0, 0, 0));
 	help.setOutlineThickness(5.f);
 	help.setOutlineColor(Color(255, 255, 255));
 	help.setOutlineColor(Color(251, 62, 146));
 
 	RectangleShape exit;
-	exit.setPosition(Vector2f(476.f, 618.f));
-	exit.setSize(Vector2f(200.f, 70.f));
+	exit.setPosition(Vector2f(476.f, 498.f));//позиция текста
 	exit.setFillColor(Color(0, 0, 0));
 	exit.setOutlineThickness(5.f);
-	exit.setOutlineColor(Color(251, 62, 62));
+	exit.setOutlineColor(Color(251, 62, 62));*/
 
 	Font font;
 	font.loadFromFile("13.ttf");
-	Text t1("", font, 30), t2("", font, 30), t3("", font, 30), t4("", font, 30), t5("",	font, 30);
+	Text t1("", font, 25), t2("", font, 25), t3("", font, 25), t4("", font, 25), t5("",	font, 25), t6("", font, 50);
 	t1.setString(L"Начать игру");
 	t2.setString(L"Об игре");
 	t3.setString(L"Доска почета");
-	t4.setString(L"Помощь/справка");
+	t4.setString(L"Помощь");
 	t5.setString(L"Выход");
-	t1.setPosition(95, 260);
-	t2.setPosition(381, 90);
-	t3.setPosition(681, 90);
-	t4.setPosition(887, 260);
-	t5.setPosition(521, 628);
+	t6.setString(L"Game Dungeon");
+
+
+	t1.setPosition(600, 228);//Начать игру
+	t2.setPosition(620, 328);//Об игре
+	t3.setPosition(600, 428);//Доска почета
+	t4.setPosition(615, 528);//Помощь
+	t5.setPosition(625, 628);//Выход
+	t6.setPosition(520, 128);//
+
 	while (window.isOpen())
 	{
 		Event event;
@@ -73,46 +73,44 @@ void menu()
 				break;
 			}
 		}
-		exit.setOutlineColor(Color(251, 62, 62));
-		Game.setOutlineColor(Color(251, 62, 146));
-		aboutGame.setOutlineColor(Color(251, 62, 146));
-		desk_of_fame.setOutlineColor(Color(251, 62, 146));
-		help.setOutlineColor(Color(251, 62, 146));
 
-		/*t1.setFillColor(Color::Magenta);
-		t2.setFillColor(Color::Magenta);
-		t3.setFillColor(Color::Magenta);
-		t4.setFillColor(Color::Magenta);
-		t5.setFillColor(Color::Red);*/
-		if (IntRect(80, 250, 200, 70).contains(Mouse::getPosition(window)))
+		
+
+		if (IntRect(600, 228, 200, 70).contains(Mouse::getPosition(window)))
 		{
-			Game.setOutlineColor(Color(106, 251, 62));
-				//t1.setFillColor(Color::Green);
+				t1.setColor(Color::Black);
 			m = 1;
 		}
-		if (IntRect(872, 250, 200, 70).contains(Mouse::getPosition(window)))
+		else t1.setColor(Color::White);
+
+		if (IntRect(620, 328, 200, 70).contains(Mouse::getPosition(window)))
 		{
-			aboutGame.setOutlineColor(Color(106, 251, 62));
-			//t4.setFillColor(Color::Green);
+			t2.setColor(Color::Black);
 			m = 2;
 		}
-		if (IntRect(326, 80, 200, 70).contains(Mouse::getPosition(window)))
+		else t2.setColor(Color::White);
+
+		if (IntRect(600, 428, 200, 70).contains(Mouse::getPosition(window)))
 		{
-			desk_of_fame.setOutlineColor(Color(106, 251, 62));
-			//t2.setFillColor(Color::Green);
+			t3.setColor(Color::Black);
 			m = 3;
 		}
-		if (IntRect(626, 80, 200, 70).contains(Mouse::getPosition(window)))
+		else t3.setColor(Color::White);
+
+		if (IntRect(615, 528, 200, 70).contains(Mouse::getPosition(window)))
 		{
-			help.setOutlineColor(Color(106, 251, 62));
-			//t3.setFillColor(Color(0, 255, 0));
+			t4.setColor(Color::Black);
 			m = 4;
 		}
-		if (IntRect(476, 618, 200, 70).contains(Mouse::getPosition(window)))
+		else t4.setColor(Color::White);
+
+		if (IntRect(625, 628, 200, 70).contains(Mouse::getPosition(window)))
 		{
-			exit.setOutlineColor(Color(255, 30, 30));
+			t5.setColor(Color::Red);
 			m = 5;
 		}
+		else t5.setColor(Color::White);
+
 		if (Mouse::isButtonPressed(Mouse::Left))
 		{
 			switch (m)
@@ -141,17 +139,13 @@ void menu()
 			}
 		}
 		window.clear();
-		//window.draw(Background);
-		window.draw(Game);
-		window.draw(aboutGame);
-		window.draw(desk_of_fame);
-		window.draw(help);
-		window.draw(exit);
+		window.draw(Background);
 		window.draw(t1);
 		window.draw(t2);
 		window.draw(t3);
 		window.draw(t4);
 		window.draw(t5);
+		window.draw(t6);
 		window.display();
 	}
 }

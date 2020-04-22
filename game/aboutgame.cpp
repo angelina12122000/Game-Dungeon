@@ -2,5 +2,6 @@
 
 void aboutgame()
 {
-
+	Text text;
+	text.setString("Hello world");
 }

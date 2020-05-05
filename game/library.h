@@ -18,3 +18,4 @@ void aboutgame();
 void game();
 void hhelp();
 void menu();
+void monsters();

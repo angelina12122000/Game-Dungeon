@@ -8,36 +8,6 @@ void menu()
 	BackgroundTexture.loadFromFile("C:/Users/Ангелина/source/repos/game/game/imges/fonMenu.png");
 	Sprite Background(BackgroundTexture);
 
-	/*RectangleShape Game;
-	Game.setPosition(Vector2f(476.f, 218.f));//позиция текста
-	Game.setFillColor(Color(250, 0, 0));
-	Game.setOutlineThickness(5.f);
-	Game.setOutlineColor(Color(251, 62, 146));
-
-	RectangleShape aboutGame;
-	aboutGame.setPosition(Vector2f(476.f, 288.f));//позиция текста
-	aboutGame.setFillColor(Color(0, 0, 0));
-	aboutGame.setOutlineThickness(5.f);
-	aboutGame.setOutlineColor(Color(251, 62, 146));
-
-	RectangleShape desk_of_fame;
-	desk_of_fame.setPosition(Vector2f(476.f, 358.f));//позиция текста
-	desk_of_fame.setFillColor(Color(0, 0, 0));
-	desk_of_fame.setOutlineThickness(5.f);
-	desk_of_fame.setOutlineColor(Color(251, 62, 146));
-
-	RectangleShape help;
-	help.setPosition(Vector2f(476.f, 428.f));//позиция текста
-	help.setFillColor(Color(0, 0, 0));
-	help.setOutlineThickness(5.f);
-	help.setOutlineColor(Color(255, 255, 255));
-	help.setOutlineColor(Color(251, 62, 146));
-
-	RectangleShape exit;
-	exit.setPosition(Vector2f(476.f, 498.f));//позиция текста
-	exit.setFillColor(Color(0, 0, 0));
-	exit.setOutlineThickness(5.f);
-	exit.setOutlineColor(Color(251, 62, 62));*/
 
 	Font font;
 	font.loadFromFile("13.ttf");

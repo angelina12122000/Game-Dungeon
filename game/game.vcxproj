@@ -25,6 +25,7 @@
     <ClCompile Include="help.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="menu.cpp" />
+    <ClCompile Include="Monsters.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="library.h" />
